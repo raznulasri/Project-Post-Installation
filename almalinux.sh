@@ -1,4 +1,5 @@
 ##skrip untuk ubah port ssh kepada 20222 after firewalld on
+chmod +x almalinux.sh
 
 #!/bin/bash
 
