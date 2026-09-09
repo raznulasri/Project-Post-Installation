@@ -16,3 +16,19 @@ Execute the following command in your terminal:
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh | bash
+```
+
+📌 Task Progress
+✅ Completed
+
+[x] Install bash-completion
+
+[x] Disable SELinux
+
+[x] Change SSH/service port to standard company policy
+
+⏳ Pending
+
+[ ] cPanel installation
+
+[ ] cPanel update
