@@ -32,7 +32,7 @@ curl -sSL https://raw.githubusercontent.com/raznulasri/Project-Post-Installation
 [x] Change SSH/service port to standard company policy
 
 
-⏳ Pending
+⏳ Pending 2
 
 [ ] cPanel installation
 
