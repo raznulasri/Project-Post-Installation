@@ -65,7 +65,13 @@ else
   cp $(ls -t ${SSH_CONFIG}.bak_* | head -n 1) $SSH_CONFIG
 fi
 
+echo
+echo
+
 firewall-cmd --permanent --add-port=20222/tcp
 firewall-cmd --permanent --remove-service=ssh
 firewall-cmd --reload
 firewall-cmd --list-ports
+
+echo
+echo
