@@ -1,16 +1,18 @@
-How to install on Almalinux 9
-Make sure you in root access
-curl -sSL https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh | bash
+# AlmaLinux 9 Post-Installation Setup
 
-Done
--install bash-completion
--disabled selinux
--change port to standard company policy
+![OS Support](https://img.shields.io/badge/OS-AlmaLinux%209-blue?style=flat-square&logo=almalinux)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
+Automated script for initial system preparation and base configuration following an **AlmaLinux 9** installation.
 
-Pending
-Cpanel installation
-cpanel update
+---
 
+## 🚀 Installation
 
+> [!IMPORTANT]
+> Ensure you run this script with **root access**.
 
+Execute the following command in your terminal:
+
+```bash
+curl -sSL [https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh](https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh) | bash
