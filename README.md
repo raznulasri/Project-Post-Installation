@@ -23,11 +23,14 @@ curl -sSL https://raw.githubusercontent.com/raznulasri/Project-Post-Installation
 
 ✅ Completed
 
+[x] Patching update
+
 [x] Install bash-completion
 
 [x] Disable SELinux
 
 [x] Change SSH/service port to standard company policy
+
 
 ⏳ Pending
 
