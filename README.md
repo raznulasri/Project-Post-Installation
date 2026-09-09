@@ -15,16 +15,21 @@ Automated script for initial system preparation and base configuration following
 Execute the following command in your terminal:
 
 ```bash
-curl -sSL [https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh](https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh) | bash
-
-
+curl -sSL https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh | bash
 ```
 
-### ✅ Completed
-- [x] Install bash-completion
-- [x] Disable SELinux
-- [x] Change SSH/service port to standard company policy
+📌 Task Progress
 
-### ⏳ Pending
-- [ ] cPanel installation
-- [ ] cPanel update
+✅ Completed
+
+[x] Install bash-completion
+
+[x] Disable SELinux
+
+[x] Change SSH/service port to standard company policy
+
+⏳ Pending
+
+[ ] cPanel installation
+
+[ ] cPanel update

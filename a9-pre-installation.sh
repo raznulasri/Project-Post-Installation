@@ -1,3 +1,9 @@
+echo patching update
+yum update -y
+echo
+echo
+
+
 echo install bash-completion
 yum install bash-completion -y
 echo
@@ -74,4 +80,4 @@ firewall-cmd --reload
 firewall-cmd --list-ports
 
 echo
-echo
+echo "Please reboot your server"
