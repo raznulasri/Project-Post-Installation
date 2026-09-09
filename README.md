@@ -25,6 +25,6 @@ curl -sSL [https://raw.githubusercontent.com/raznulasri/Project-Post-Installatio
 - [x] Disable SELinux
 - [x] Change SSH/service port to standard company policy
 
-### ⏳ Pending
+### ⏳ Pending 2
 - [ ] cPanel installation
 - [ ] cPanel update
