@@ -11,6 +11,7 @@ Automated script for initial system preparation and base configuration following
 
 > [!IMPORTANT]
 > Ensure you run this script with **root access**.
+> Please **reboot** your server once done.
 
 Execute the following command in your terminal:
 
