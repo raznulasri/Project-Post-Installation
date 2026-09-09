@@ -1,3 +1,9 @@
+echo patching update
+yum update -y
+echo
+echo
+
+
 echo install bash-completion
 yum install bash-completion -y
 echo
