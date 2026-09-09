@@ -15,7 +15,8 @@ Automated script for initial system preparation and base configuration following
 Execute the following command in your terminal:
 
 ```bash
-curl -sSL [https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh](https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh) | bash```
+curl -sSL [https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh](https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh) | bash
+```
 
 ### ✅ Completed
 - [x] Install bash-completion
