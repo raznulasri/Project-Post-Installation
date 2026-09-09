@@ -18,7 +18,7 @@ Execute the following command in your terminal:
 curl -sSL [https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh](https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh) | bash
 
 
-` ``` `
+```
 
 ### ✅ Completed
 - [x] Install bash-completion
