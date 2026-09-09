@@ -82,3 +82,5 @@ firewall-cmd --list-ports
 echo
 echo "Please reboot your server"
 echo
+echo
+echo
