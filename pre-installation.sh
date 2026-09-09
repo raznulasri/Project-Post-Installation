@@ -1,2 +1,2 @@
-# install bash-completion
+echo install bash-completion
 yum install bash-completion -y
