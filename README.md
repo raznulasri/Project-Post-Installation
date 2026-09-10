@@ -1,9 +1,9 @@
-# AlmaLinux 9 Post-Installation Setup
+# Linux Post-Installation Setup
 
 ![OS Support](https://img.shields.io/badge/OS-AlmaLinux%209-blue?style=flat-square&logo=almalinux)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
-Automated script for initial system preparation and base configuration following an **AlmaLinux 9** installation.
+Automated script for initial system preparation and base configuration following an **Linux** installation.
 
 ---
 
