@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Prevent interactive prompts (Ubuntu/Debian)
+# Elak semua popup interaktif (Ubuntu/Debian)
 export DEBIAN_FRONTEND=noninteractive
 
 # Exit immediately if a command exits with a non-zero status
@@ -11,29 +11,6 @@ if [ "$EUID" -ne 0 ]; then
   echo "[-] Please run this script as root or using sudo."
   exit 1
 fi
-
-# Command-line argument for mode selection
-case "$1" in
-  1)
-    INSTALL_CPANEL=true
-    echo "[+] Mode: WITH cPanel"
-    ;;
-  2)
-    INSTALL_CPANEL=false
-    echo "[+] Mode: WITHOUT cPanel"
-    ;;
-  3)
-    echo "[-] All processes cancelled. Exiting script."
-    exit 0
-    ;;
-  *)
-    echo "[-] Invalid choice. Usage: $0 {1|2|3}"
-    echo "    1 = yes with cPanel"
-    echo "    2 = yes without cPanel"
-    echo "    3 = cancel all"
-    exit 1
-    ;;
-esac
 
 NEW_PORT=20222
 SSH_CONFIG="/etc/ssh/sshd_config"
@@ -72,7 +49,7 @@ ubuntu)
     echo "[+] AppArmor disabled."
   fi
 
-  # Ensure /run/sshd exists (Ubuntu fix)
+  # Pastikan /run/sshd wujud (fix Ubuntu privilege separation)
   echo "[+] Ensure /run/sshd exists..."
   mkdir -p /run/sshd
   chmod 0755 /run/sshd
@@ -146,7 +123,7 @@ fi
 sshd -t
 if [ $? -eq 0 ]; then
   echo "[+] SSH configuration syntax is valid."
-  # Auto select service name based on OS
+  # Auto pilih service name ikut OS
   if systemctl list-unit-files | grep -q sshd.service; then
     systemctl restart sshd.service
   else
@@ -161,34 +138,28 @@ fi
 
 echo
 # ----------------------------------------------------------------------
-# 3. Download and Install cPanel (conditional)
+# 3. Download and Install cPanel
 # ----------------------------------------------------------------------
-if [ "$INSTALL_CPANEL" = true ]; then
-  echo "=========================================="
-  echo " Installing cPanel & WHM"
-  echo "=========================================="
+echo "=========================================="
+echo " Installing cPanel & WHM"
+echo "=========================================="
 
-  cd /home
-  curl -o latest -L https://securedownloads.cpanel.net/latest
-  sh latest
+cd /home
+curl -o latest -L https://securedownloads.cpanel.net/latest
+sh latest
 
-  echo
-  echo "=========================================="
-  echo " Running Force Update on cPanel"
-  echo "=========================================="
-  /usr/local/cpanel/scripts/upcp --force
+echo
+echo "=========================================="
+echo " Running Force Update on cPanel"
+echo "=========================================="
+/usr/local/cpanel/scripts/upcp --force
 
-  echo
-  echo "=========================================="
-  echo " Setup Finished!"
-  echo " Log into WHM directly using:"
-  echo " https://$(cat /var/cpanel/mainip):2087"
-  echo "=========================================="
-else
-  echo "[+] Skipping cPanel installation as per user choice."
-fi
-
+echo
+echo "=========================================="
+echo " Setup Finished!"
+echo " Log into WHM directly using:"
+echo " https://$(cat /var/cpanel/mainip):2087"
+echo "=========================================="
 echo
 echo "IMPORTANT: Please reboot your server to apply all kernel and SELinux changes."
 echo "Command: sudo reboot"
-
