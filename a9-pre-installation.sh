@@ -158,6 +158,7 @@ echo "=========================================="
 echo " Running Force Update on cPanel"
 echo "=========================================="
 /usr/local/cpanel/scripts/upcp --force
+fi
 
 echo
 echo "=========================================="
