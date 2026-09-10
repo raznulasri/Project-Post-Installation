@@ -12,28 +12,28 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-# Startup options
-echo "=========================================="
-echo " Select installation mode:"
-echo " 1) yes with cPanel"
-echo " 2) yes without cPanel"
-echo " 3) cancel all"
-echo "=========================================="
-read -p "Enter choice (1/2/3): " choice
-
-if [[ "$choice" == "1" ]]; then
-  INSTALL_CPANEL=true
-  echo "[+] Mode: WITH cPanel"
-elif [[ "$choice" == "2" ]]; then
-  INSTALL_CPANEL=false
-  echo "[+] Mode: WITHOUT cPanel"
-elif [[ "$choice" == "3" ]]; then
-  echo "[-] All processes cancelled. Exiting script."
-  exit 0
-else
-  echo "[-] Invalid choice. Exiting."
-  exit 1
-fi
+# Command-line argument for mode selection
+case "$1" in
+  1)
+    INSTALL_CPANEL=true
+    echo "[+] Mode: WITH cPanel"
+    ;;
+  2)
+    INSTALL_CPANEL=false
+    echo "[+] Mode: WITHOUT cPanel"
+    ;;
+  3)
+    echo "[-] All processes cancelled. Exiting script."
+    exit 0
+    ;;
+  *)
+    echo "[-] Invalid choice. Usage: $0 {1|2|3}"
+    echo "    1 = yes with cPanel"
+    echo "    2 = yes without cPanel"
+    echo "    3 = cancel all"
+    exit 1
+    ;;
+esac
 
 NEW_PORT=20222
 SSH_CONFIG="/etc/ssh/sshd_config"
@@ -191,3 +191,4 @@ fi
 echo
 echo "IMPORTANT: Please reboot your server to apply all kernel and SELinux changes."
 echo "Command: sudo reboot"
+
