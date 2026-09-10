@@ -34,3 +34,7 @@ curl -sSL https://raw.githubusercontent.com/raznulasri/Project-Post-Installation
 [x] cPanel installation - Temporary Disable 
 
 [x] cPanel update - Temporary Disable
+
+---
+
+Thank you for using this project! Your support is greatly appreciated.
