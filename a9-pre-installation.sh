@@ -89,6 +89,13 @@ echo Updating Cpanel
 /usr/local/cpanel/scripts/upcp --force
 
 echo
+echo
+echo
+echo "Log into WHM/cPanel yourself: Open your browser and navigate directly to your server's IP or domain on the WHM port:"
+echo "https://$(cat /var/cpanel/mainip):2087"
+echo
+echo
+
 echo Please reboot your server
 echo
 echo
