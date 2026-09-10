@@ -144,6 +144,11 @@ echo "=========================================="
 echo " Installing cPanel & WHM"
 echo "=========================================="
 
+read -p "Do you want to proceed with cPanel installation? (yes/no): " confirm
+if [[ "$confirm" != "yes" ]]; then
+  echo "[-] cPanel installation skipped."
+else
+
 cd /home
 curl -o latest -L https://securedownloads.cpanel.net/latest
 sh latest
