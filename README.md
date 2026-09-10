@@ -31,6 +31,6 @@ curl -sSL https://raw.githubusercontent.com/raznulasri/Project-Post-Installation
 
 [x] Change SSH/service port to standard company policy
 
-[x] cPanel installation
+[x] cPanel installation - Temporary Disable 
 
-[x] cPanel update
+[x] cPanel update - Temporary Disable
