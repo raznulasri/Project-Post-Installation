@@ -144,20 +144,15 @@ echo "=========================================="
 echo " Installing cPanel & WHM"
 echo "=========================================="
 
-read -p "Do you want to proceed with cPanel installation? (yes/no): " confirm
-if [[ "$confirm" != "yes" ]]; then
-  echo "[-] cPanel installation skipped."
-else
-  cd /home
-  curl -o latest -L https://securedownloads.cpanel.net/latest
-  sh latest
+cd /home
+#curl -o latest -L https://securedownloads.cpanel.net/latest
+#sh latest
 
-  echo
-  echo "=========================================="
-  echo " Running Force Update on cPanel"
-  echo "=========================================="
-  /usr/local/cpanel/scripts/upcp --force
-fi
+echo
+echo "=========================================="
+echo " Running Force Update on cPanel"
+echo "=========================================="
+#/usr/local/cpanel/scripts/upcp --force
 
 echo
 echo "=========================================="
