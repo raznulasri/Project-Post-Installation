@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Elak semua popup interaktif (Ubuntu/Debian)
+export DEBIAN_FRONTEND=noninteractive
+
 # Exit immediately if a command exits with a non-zero status
 set -e
 
@@ -16,7 +19,6 @@ SSH_CONFIG="/etc/ssh/sshd_config"
 if [ -f /etc/os-release ]; then
   . /etc/os-release
   OS=$ID
-  LIKE=$ID_LIKE
 else
   echo "[-] Cannot detect OS via /etc/os-release."
   exit 1
@@ -35,7 +37,10 @@ ubuntu)
   apt-get update -y && apt-get upgrade -y
 
   echo "[+] Installing base tools..."
-  apt-get install -y bash-completion curl perl wget ca-certificates ufw
+  apt-get install -y \
+    -o Dpkg::Options::="--force-confdef" \
+    -o Dpkg::Options::="--force-confold" \
+    bash-completion curl perl wget ca-certificates ufw
 
   # Disable AppArmor (cPanel compatibility)
   if systemctl is-active --quiet apparmor; then
@@ -43,6 +48,11 @@ ubuntu)
     systemctl disable apparmor
     echo "[+] AppArmor disabled."
   fi
+
+  # Pastikan /run/sshd wujud (fix Ubuntu privilege separation)
+  echo "[+] Ensure /run/sshd exists..."
+  mkdir -p /run/sshd
+  chmod 0755 /run/sshd
   ;;
 
 almalinux | rocky | rhel | centos)
@@ -113,7 +123,12 @@ fi
 sshd -t
 if [ $? -eq 0 ]; then
   echo "[+] SSH configuration syntax is valid."
-  systemctl restart sshd
+  # Auto pilih service name ikut OS
+  if systemctl list-unit-files | grep -q sshd.service; then
+    systemctl restart sshd.service
+  else
+    systemctl restart ssh.service
+  fi
   echo "=== SSH Port changed to $NEW_PORT successfully ==="
 else
   echo "[-] SSH syntax error detected. Restoring backup..."
