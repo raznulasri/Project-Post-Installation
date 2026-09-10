@@ -1,6 +1,9 @@
 # Linux Post-Installation Setup
 
-![OS Support](https://img.shields.io/badge/OS-AlmaLinux%209-blue?style=flat-square&logo=almalinux)
+![AlmaLinux](https://img.shields.io/badge/AlmaLinux-blue?style=flat-square&logo=almalinux)
+![Red Hat](https://img.shields.io/badge/Red%20Hat-EE0000?style=flat-square&logo=redhat&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white)
+![Debian](https://img.shields.io/badge/Debian-A81D33?style=flat-square&logo=debian&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
 Automated script for initial system preparation and base configuration following an **Linux** installation.
