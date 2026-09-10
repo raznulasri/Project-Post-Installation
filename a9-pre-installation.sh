@@ -84,8 +84,9 @@ echo
 echo
 echo Installing Cpanel
 cd /home && curl -o latest -L https://securedownloads.cpanel.net/latest && sh latest
-
-
+echo
+echo Updating Cpanel
+/usr/local/cpanel/scripts/upcp --force
 
 echo
 echo Please reboot your server
