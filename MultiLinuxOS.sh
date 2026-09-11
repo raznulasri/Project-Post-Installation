@@ -29,6 +29,7 @@ elif [[ "$choice" == "2" ]]; then
   echo "[+] Mode: WITHOUT cPanel"
 elif [[ "$choice" == "3" ]]; then
   echo "[-] All processes cancelled. Exiting script."
+  rm -rf MultiLinuxOS.sh
   exit 0
 else
   echo "[-] Invalid choice. Exiting."
