@@ -15,7 +15,7 @@ Automated script for initial system preparation and base configuration following
 > [!IMPORTANT]
 > Ensure you run this script with **root access**.
 > Please **reboot** your server once done.
-> Note: The script presents an interactive menu first and will not proceed with installation until you select an option (1, 2, or 3).
+> The script presents an interactive menu first and will not proceed with installation until you select an option (1, 2, or 3).
 
 Execute the following command in your terminal:
 
