@@ -19,7 +19,7 @@ Automated script for initial system preparation and base configuration following
 Execute the following command in your terminal:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/a9-pre-installation.sh | bash
+sudo curl -sSL https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/MultiLinuxOS.sh -o MultiLinuxOS.sh && sudo chmod +x MultiLinuxOS.sh && sudo ./MultiLinuxOS.sh
 ```
 
 📌 Task Progress
