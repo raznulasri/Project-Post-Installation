@@ -17,6 +17,7 @@ Automated script for initial system preparation and base configuration following
 > Please **reboot** your server once done.
 
 Execute the following command in your terminal:
+Note: The script presents an interactive menu first and will not proceed with installation until you select an option (1, 2, or 3).
 
 ```bash
 sudo curl -sSL https://raw.githubusercontent.com/raznulasri/Project-Post-Installation/main/MultiLinuxOS.sh -o MultiLinuxOS.sh && sudo chmod +x MultiLinuxOS.sh && sudo ./MultiLinuxOS.sh
