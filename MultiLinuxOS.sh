@@ -189,5 +189,7 @@ else
 fi
 
 echo
+hostnamectl set-hostname RaznulAsri
+echo
 echo "IMPORTANT: Please reboot your server to apply all kernel and SELinux changes."
 echo "Command: sudo reboot"
