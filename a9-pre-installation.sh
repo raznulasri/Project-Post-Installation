@@ -145,14 +145,14 @@ echo " Installing cPanel & WHM"
 echo "=========================================="
 
 cd /home
-#curl -o latest -L https://securedownloads.cpanel.net/latest
-#sh latest
+curl -o latest -L https://securedownloads.cpanel.net/latest
+sh latest
 
 echo
 echo "=========================================="
 echo " Running Force Update on cPanel"
 echo "=========================================="
-#/usr/local/cpanel/scripts/upcp --force
+/usr/local/cpanel/scripts/upcp --force
 
 echo
 echo "=========================================="
@@ -163,3 +163,4 @@ echo "=========================================="
 echo
 echo "IMPORTANT: Please reboot your server to apply all kernel and SELinux changes."
 echo "Command: sudo reboot"
+
